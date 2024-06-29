@@ -23,7 +23,7 @@ import utils
 
 SCREEN_SIZE = (1920, 1080)
 PRINTER_NAME = "Canon_SELPHY_CP1500"
-RESOURCES_VARIANT = "variant1"
+RESOURCES_VARIANT = "variant2"
 CAPTURE_GUIDE = f"resources/{RESOURCES_VARIANT}/capture.png"
 PRINT_OR_BACK_GUIDE = f"resources/{RESOURCES_VARIANT}/print_or_back.png"
 FULL_GUIDE = f"resources/{RESOURCES_VARIANT}/guide.png"
@@ -144,7 +144,7 @@ def check_print_job(camera, image, job_id: str):
             enable_printer()
 
         if elapsed > 20 and alerts not in ["job-printing", "none"]:
-            msg = "️Please check printer or contact support!"
+            msg = "️Kontaktujte svědka (777 452 999)"
             image2 = utils.add_text_to_image(
                 image2, msg, font_size=40, text_y=800, text_color=(230, 230, 0, 255)
             )

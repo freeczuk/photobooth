@@ -9,6 +9,7 @@ SCISSORS_ARROW_PATH = "resources/scissors_and_arrow.png"
 
 def adjust_image_for_printing(image: np.ndarray):
     image = crop_image_to_square(image)
+    image = cv2.flip(image, 1)
     image = sharpen_image(image)
     image = add_white_border(image, border_width=30)
     image = add_cutting_line(image, line_width=3)
