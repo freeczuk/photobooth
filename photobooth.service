@@ -1,0 +1,14 @@
+[Unit]
+Description=Photobooth script
+
+[Service]
+ExecStart=/usr/bin/python3 -u /home/pi/photobooth/run_booth.py
+WorkingDirectory=/home/pi/photobooth
+Environment="PYTHONPATH=/home/pi/photobooth"
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
